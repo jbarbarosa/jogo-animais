@@ -8,10 +8,13 @@ public class Tree {
         this.root = new Node("vive na terra?");
         this.root.setRight(new Node("é o macaco?"));
         this.root.setLeft(new Node("é o tubarão?"));
+        this.bindRoot();
     }
 
     public Node getRoot() { return this.root; }
 
-    public void setRoot(Node node) { this.root = node; }
-
+    private void bindRoot() {
+        this.getRoot().getRight().setPrevious(this.getRoot());
+        this.getRoot().getLeft().setPrevious(this.getRoot());
+    }
 }

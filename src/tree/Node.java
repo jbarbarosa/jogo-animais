@@ -4,6 +4,8 @@ import java.util.Optional;
 
 public class Node {
 
+    private Node previous;
+
     private String value;
 
     private Node left;
@@ -38,5 +40,13 @@ public class Node {
 
     public void setRight(Node right) {
         this.right = right;
+    }
+
+    public Node getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Node previous) {
+        this.previous = previous;
     }
 }
