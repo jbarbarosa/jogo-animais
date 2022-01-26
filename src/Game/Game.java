@@ -29,9 +29,11 @@ public class Game {
                 System.out.println("Acertei!");
                 this.start();
                 break;
-            } else if (this.parser.checkSuccessAndFollowing(response, node)) {
+            } else if (this.parser.checkFollowing(response, node)) {
                 current = node.get();
                 response = Prompt.getResponse(current.getValue());
+            } else {
+                System.out.println("Update");
             }
         }
     }

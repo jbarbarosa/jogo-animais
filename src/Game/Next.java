@@ -23,8 +23,15 @@ public class Next {
         return false;
     }
 
-    public boolean checkSuccessAndFollowing(String response, Optional<Node> next) {
-        if (response.equals("s") && next != null) {
+    public boolean checkFollowing(String response, Optional<Node> next) {
+        if ((response.equals("s") || response.equals("n")) && next != null) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checkFailureAndGameOver(String response, Optional<Node> next) {
+        if (response.equals("n") && next == null) {
             return true;
         }
         return false;
