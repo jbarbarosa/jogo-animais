@@ -1,12 +1,14 @@
 package tree;
 
+import java.util.Optional;
+
 public class Node {
 
     private String value;
 
-    private Node left;
+    private Optional<Node> left;
 
-    private Node right;
+    private Optional<Node> right;
 
     public Node() {}
 
@@ -22,19 +24,19 @@ public class Node {
         this.value = value;
     }
 
-    public Node getLeft() {
+    public Optional<Node> getLeft() {
         return left;
     }
 
     public void setLeft(Node left) {
-        this.left = left;
+        this.left = Optional.of(left);
     }
 
-    public Node getRight() {
-        return this.right;
+    public Optional<Node> getRight() {
+        return right;
     }
 
     public void setRight(Node right) {
-        this.left = right;
+        this.right = Optional.of(right);
     }
 }
