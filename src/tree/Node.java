@@ -6,9 +6,9 @@ public class Node {
 
     private String value;
 
-    private Optional<Node> left;
+    private Node left;
 
-    private Optional<Node> right;
+    private Node right;
 
     public Node() {}
 
@@ -24,19 +24,19 @@ public class Node {
         this.value = value;
     }
 
-    public Optional<Node> getLeft() {
+    public Node getLeft() {
         return left;
     }
 
     public void setLeft(Node left) {
-        this.left = Optional.of(left);
+        this.left = left;
     }
 
-    public Optional<Node> getRight() {
+    public Node getRight() {
         return right;
     }
 
     public void setRight(Node right) {
-        this.right = Optional.of(right);
+        this.right = right;
     }
 }

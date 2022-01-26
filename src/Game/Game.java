@@ -24,16 +24,17 @@ public class Game {
         Node current = this.tree.getRoot();
         while (true) {
             if (response.equals("q")) break;
-            Optional<Node> node = this.parser.evaluate(response, current);
+            Node node = this.parser.evaluate(response, current);
             if (this.parser.checkGameOverSuccess(response, node)) {
                 System.out.println("Acertei!");
                 this.start();
                 break;
             } else if (this.parser.checkFollowing(node)) {
-                current = node.get();
+                current = node;
                 response = Prompt.getResponse(current.getValue());
             } else {
                 System.out.println("Update");
+                break;
             }
         }
     }

@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public class Next {
 
-    public Optional<Node> evaluate(String response, Node current) {
+    public Node evaluate(String response, Node current) {
         if (Objects.equals(response, "s")) {
             return current.getRight();
         } else {
@@ -15,7 +15,7 @@ public class Next {
         }
     }
 
-    public boolean checkGameOverSuccess(String response, Optional<Node> next) {
+    public boolean checkGameOverSuccess(String response, Node next) {
         System.out.println("response: " + response);
         if (response.equals("s") && next == null) {
             return true;
@@ -23,14 +23,14 @@ public class Next {
         return false;
     }
 
-    public boolean checkFollowing(Optional<Node> next) {
+    public boolean checkFollowing(Node next) {
         if (next != null) {
             return true;
         }
         return false;
     }
 
-    public boolean checkFailureAndGameOver(String response, Optional<Node> next) {
+    public boolean checkFailureAndGameOver(String response, Node next) {
         if (response.equals("n") && next == null) {
             return true;
         }
