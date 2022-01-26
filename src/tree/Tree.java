@@ -5,9 +5,9 @@ public class Tree {
     private Node root;
 
     public Tree() {
-        this.root = new Node("O animal que você pensou vive na terra?");
-        this.root.setRight(new Node("O animal que você pensou é o macaco?"));
-        this.root.setLeft(new Node("O animal que você pensou é o tubarão?"));
+        this.root = new Node("vive na terra?");
+        this.root.setRight(new Node("é o macaco?"));
+        this.root.setLeft(new Node("é o tubarão?"));
     }
 
     public Node getRoot() { return this.root; }
