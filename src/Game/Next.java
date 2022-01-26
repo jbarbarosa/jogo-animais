@@ -23,8 +23,8 @@ public class Next {
         return false;
     }
 
-    public boolean checkFollowing(String response, Optional<Node> next) {
-        if ((response.equals("s") || response.equals("n")) && next != null) {
+    public boolean checkFollowing(Optional<Node> next) {
+        if (next != null) {
             return true;
         }
         return false;
