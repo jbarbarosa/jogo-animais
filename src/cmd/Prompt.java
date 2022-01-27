@@ -39,4 +39,8 @@ public class Prompt {
             return newAnimal(previousAnimal);
         }
     }
+
+    public static void firstPrompt() {
+        System.out.println("pense em um animal e pressione s para começar");
+    }
 }

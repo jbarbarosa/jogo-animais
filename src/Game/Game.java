@@ -33,8 +33,9 @@ public class Game {
                 current = node;
                 response = Prompt.getResponse(current.getValue());
             } else {
-                System.out.println("Update");
                 Update.updateNode(current, Prompt.newAnimal(current.getValue()));
+                this.start();
+                break;
             }
         }
     }
