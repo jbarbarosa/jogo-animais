@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public class Next {
 
+    //Esse método decide qual ramo da árvore seguir, "s" para a direita e "n" para esquerda
     public Node evaluate(String response, Node current) {
         if (Objects.equals(response, "s")) {
             return current.getRight();
@@ -15,6 +16,7 @@ public class Next {
         }
     }
 
+    //Determina se o usuário respondeu com "s" em um Node folha, encerrando com vitória
     public boolean checkGameOverSuccess(String response, Node next) {
         System.out.println("response: " + response);
         if (response.equals("s") && next == null) {
@@ -23,6 +25,7 @@ public class Next {
         return false;
     }
 
+    //Metódo que serve de guarda para verificar se há um nó seguinte
     public boolean checkFollowing(Node next) {
         if (next != null) {
             return true;
@@ -30,10 +33,4 @@ public class Next {
         return false;
     }
 
-    public boolean checkFailureAndGameOver(String response, Node next) {
-        if (response.equals("n") && next == null) {
-            return true;
-        }
-        return false;
-    }
 }

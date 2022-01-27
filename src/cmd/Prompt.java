@@ -3,6 +3,7 @@ package cmd;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Esta classe é responsável por indagar o usuário por uma resposta
 public class Prompt {
 
     public static String getResponse(String text) {
@@ -24,6 +25,7 @@ public class Prompt {
         }
     }
 
+    //Prompt que é enviado quando o jogo não conhece o animal e precisa atualizar a árvore
     public static ArrayList<String> newAnimal(String previousAnimal) {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -40,7 +42,4 @@ public class Prompt {
         }
     }
 
-    public static void firstPrompt() {
-        System.out.println("pense em um animal e pressione s para começar");
-    }
 }
